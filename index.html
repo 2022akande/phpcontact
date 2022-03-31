@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-form-register</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="nav">
+       <h1>Contact-Form</h1>
+    </div>
+        <div class="card">
+         <form action="index.php" method="post" name='myform'>
+             <label>Enter the name</label><input type="text" name="name" id="form-name" placeholder="Enter Your name"><br><br>
+             <label>Enter the email</label><input type="email" name="email" id="form-email" placeholder="Enter Email-ID"><br><br>
+             <label>Select issue</label><br>
+             <select name="issue" id="select">
+                 <option value="Query">Query</option>
+                 <option value="Feedback">Feedback</option>
+                 <option value="Complaint">Complaint</option>
+                 <option value="Other">Other</option>
+             </select><br><br>
+             <textarea name="comment" id="textarea" cols="45" rows="10"
+                       placeholder="Enter your comment here"></textarea><br><br>
+             <input type="submit" name="contact" value="Submit" onclick="validate();">
+         </form>
+            <script>
+            
+                 function validate() {
+                    var name=document.forms['myform']['name'].value;
+                    var email=document.forms['myform']['email'].value;
+                    var select=document.forms['myform']['issue'].value;
+                    var comment=document.forms['myform']['comment'].value;
+                    if (name=="") {
+                        alert("Enter the name");
+                        document.forms['myform']['name'].focus();
+                    }
+                    else if(email==""){
+                        alert("Enter the email");
+                        document.forms['myform']['email'].focus();
+                    }
+                    else if (select=="") {
+                        alert("Enter this field");
+                        document.forms['myform']['issue'].focus();
+                    }
+                    else if (comment=="") {
+                        alert("Enter this field");
+                        document.forms['myform']['comment'].focus();
+                    }
+                    else{
+                        alert("submit");
+                    }
+                }
+            </script>
+        </div>
+</body>
+</html>

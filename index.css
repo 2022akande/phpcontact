@@ -1,0 +1,30 @@
+.nav h1{
+    font-family: verdana;
+    font-size: 180%;
+    font-weight: lighter;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+  }
+  .card{
+      margin-left: 20%;
+      margin-right:20%;
+      background-color: #5FC4FE;
+      color: white;
+      font-family: verdana;
+      font-size: 120%;
+      font-weight:lighter;
+  }
+
+  label{
+    float: left;
+  }
+
+  input{
+      width: 407px;
+      height:30px;
+  }
+  table,tr,td{
+      padding:10px;
+  }
+  
